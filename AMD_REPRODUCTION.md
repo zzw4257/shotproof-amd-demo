@@ -26,7 +26,7 @@ Use `python3 verify_evidence.py PATH_TO_EXPORT.json` to verify embedded PNG and 
 
 ## Interpretation limits
 
-The images are original synthetic illustrations with authored text labels. They are demonstration fixtures, not a hidden test set. No detection accuracy, calibrated confidence, natural-product generalization or reviewer-time benefit is established. A model response saying `uncertainty: 0` or `low` is an uncalibrated model statement. Agent demo annotations carry `author_type: agent_demo` and do not constitute human approval.
+The images are original synthetic illustrations with author-written text labels naming the expected changes, such as “Occluded view” and “Right-hand region concealed”. They are not a blind visual-recognition test. They are demonstration fixtures, not a hidden test set. No detection accuracy, calibrated confidence, natural-product generalization or reviewer-time benefit is established. A model response saying `uncertainty: 0` or `low` is an uncalibrated model statement. Agent demo annotations carry `author_type: agent_demo` and do not constitute human approval.
 
 The running GPU app requires the owner's AMD login. It has not been made public. Token Factory remains a separate blocked account-assignment path; the private GPU workflow does not depend on it.
 

@@ -1,0 +1,78 @@
+[
+  {
+    "viewport": {
+      "width": 1600,
+      "height": 1000
+    },
+    "status": "passed",
+    "checks": [
+      "responsive",
+      "exact recorded images",
+      "raw-output-derived findings",
+      "hash tamper blocked",
+      "recover after blocked receipt",
+      "mobile image toggle",
+      "manual draft retention",
+      "real export",
+      "no simulated inference",
+      "no JS errors"
+    ]
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "status": "passed",
+    "checks": [
+      "responsive",
+      "exact recorded images",
+      "raw-output-derived findings",
+      "hash tamper blocked",
+      "recover after blocked receipt",
+      "mobile image toggle",
+      "manual draft retention",
+      "real export",
+      "no simulated inference",
+      "no JS errors"
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": "passed",
+    "checks": [
+      "responsive",
+      "exact recorded images",
+      "raw-output-derived findings",
+      "hash tamper blocked",
+      "recover after blocked receipt",
+      "mobile image toggle",
+      "manual draft retention",
+      "real export",
+      "no simulated inference",
+      "no JS errors"
+    ]
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 720
+    },
+    "status": "passed",
+    "checks": [
+      "responsive",
+      "exact recorded images",
+      "raw-output-derived findings",
+      "hash tamper blocked",
+      "recover after blocked receipt",
+      "mobile image toggle",
+      "manual draft retention",
+      "real export",
+      "no simulated inference",
+      "no JS errors"
+    ]
+  }
+]
