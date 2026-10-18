@@ -53,5 +53,6 @@
   "validation/redesign-browser-results.json": "65406a71b38b79ae5ca6b159ec6de24dff8730f93a0c0359d0c4b66fedc95aec",
   "validation/round3-layout-results.json": "71eab7b02fb1be9fdb50d1c592ed66de296ce9577d25e1ed8bb7e15391c843f0",
   "verify_evidence.py": "004f818d35c60c300e04ec60bde2e0756fe7a6bc82b9000af5fed5838091c3dd",
-  "workbench.js": "44cdc7e11626d7318ee52517188be5d0860f7f174bd4ecc9477831eddb5bfbbe"
+  "workbench.js": "44cdc7e11626d7318ee52517188be5d0860f7f174bd4ecc9477831eddb5bfbbe",
+  ".gitattributes": "b3e710b0f2bca62f09ca7c4c5805beb067acaf9f8825a30f93fa9541d5cfa648"
 }
