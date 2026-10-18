@@ -6,7 +6,7 @@ The working private demo runs Qwen2-VL-7B-Instruct on an AMD Instinct MI300X VF 
 
 ## Judge access
 
-Open the [recorded AMD evidence viewer](https://zzw4257.github.io/shotproof-amd-demo/evidence.html). It loads three saved comparisons and verifies exact PNG and raw-output hashes. This static page makes no inference request and needs no login. It includes the captioned 42-second actual GPU demonstration and five-slide pitch.
+Open the [recorded AMD evidence viewer](https://oldblog.zzw4257.cn/shotproof-amd-demo/evidence.html). It loads three saved comparisons and verifies exact PNG and raw-output hashes. This static page makes no inference request and needs no login. It includes the captioned 42-second actual GPU demonstration and five-slide pitch.
 
 ## Run locally without credentials
 
