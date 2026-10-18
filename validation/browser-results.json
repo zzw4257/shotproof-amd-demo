@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "model_inference": false,
+  "results": [
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "status": "passed",
+      "checks": [
+        "startup hashes",
+        "responsive layout",
+        "draft retention",
+        "invalid coordinates",
+        "append-only notes",
+        "real export",
+        "missing credential blocked",
+        "no fabricated inference"
+      ],
+      "js_errors": []
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "status": "passed",
+      "checks": [
+        "startup hashes",
+        "responsive layout",
+        "draft retention",
+        "invalid coordinates",
+        "append-only notes",
+        "real export",
+        "missing credential blocked",
+        "no fabricated inference"
+      ],
+      "js_errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "passed",
+      "checks": [
+        "startup hashes",
+        "responsive layout",
+        "draft retention",
+        "invalid coordinates",
+        "append-only notes",
+        "real export",
+        "missing credential blocked",
+        "no fabricated inference"
+      ],
+      "js_errors": []
+    }
+  ]
+}

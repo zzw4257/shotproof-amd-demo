@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "created_date_utc": "2026-10-15",
+  "asset_class": "newly_authored_illustrative_vectors",
+  "historical_evidence_replaced": false,
+  "public_release_executed": false,
+  "assets": [
+    {
+      "id": "illustrative-reference-001",
+      "path": "assets/reference.svg",
+      "role": "reference",
+      "sha256": "b9964882b6f728cf895f5f966cd09c1b2193cce01c4e98b42e40c1a38a5643b1",
+      "bytes": 1225,
+      "provenance": "Newly authored deterministic SVG geometry; build_assets.py; no source images, brand assets, external fonts or models.",
+      "lineage": "shotproof-original-vector-illustrations-v1",
+      "intended_use": "Illustrative workflow demonstration only",
+      "evaluation_status": "NOT_EVALUATED",
+      "model_result": null,
+      "human_review_result": null,
+      "rights_note": "Original simple geometry authored for this project. No historical private-research assets copied. Public release and license selection still require owner approval."
+    },
+    {
+      "id": "illustrative-addition-001",
+      "path": "assets/addition.svg",
+      "role": "addition",
+      "sha256": "73511156514ce6085c53ce4d52f2ac63bc261ec0e9e385c6470edafc9003844c",
+      "bytes": 1382,
+      "provenance": "Newly authored deterministic SVG geometry; build_assets.py; no source images, brand assets, external fonts or models.",
+      "lineage": "shotproof-original-vector-illustrations-v1",
+      "intended_use": "Illustrative workflow demonstration only",
+      "evaluation_status": "NOT_EVALUATED",
+      "model_result": null,
+      "human_review_result": null,
+      "rights_note": "Original simple geometry authored for this project. No historical private-research assets copied. Public release and license selection still require owner approval."
+    },
+    {
+      "id": "illustrative-occlusion-001",
+      "path": "assets/occlusion.svg",
+      "role": "occlusion",
+      "sha256": "ba4a0c777da98969caf76cfaf6dea85cf15c1873569f4475fc935d60141aa2a5",
+      "bytes": 1423,
+      "provenance": "Newly authored deterministic SVG geometry; build_assets.py; no source images, brand assets, external fonts or models.",
+      "lineage": "shotproof-original-vector-illustrations-v1",
+      "intended_use": "Illustrative workflow demonstration only",
+      "evaluation_status": "NOT_EVALUATED",
+      "model_result": null,
+      "human_review_result": null,
+      "rights_note": "Original simple geometry authored for this project. No historical private-research assets copied. Public release and license selection still require owner approval."
+    },
+    {
+      "id": "illustrative-lighting-001",
+      "path": "assets/lighting.svg",
+      "role": "lighting",
+      "sha256": "6d1b3b53bbf743196a445b1b8bd77fb20974279b7917dff77a83c11e5181642f",
+      "bytes": 1376,
+      "provenance": "Newly authored deterministic SVG geometry; build_assets.py; no source images, brand assets, external fonts or models.",
+      "lineage": "shotproof-original-vector-illustrations-v1",
+      "intended_use": "Illustrative workflow demonstration only",
+      "evaluation_status": "NOT_EVALUATED",
+      "model_result": null,
+      "human_review_result": null,
+      "rights_note": "Original simple geometry authored for this project. No historical private-research assets copied. Public release and license selection still require owner approval."
+    }
+  ]
+}

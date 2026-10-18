@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ShotProof recorded evidence</title><link rel="stylesheet" href="style.css">
+<header><p class="kicker">SHOTPROOF / EXECUTION EVIDENCE</p><h1>Inspect the exact images<br>and original model output.</h1><div class="badge">RECORDED EXECUTION · No model runs on this page</div><p>This viewer reads an exported JSON locally. It verifies byte hashes, which do not authenticate hardware, authorship or model accuracy.</p></header>
+<main><label for="receipt">Choose an exported ShotProof inference JSON (processed locally, never uploaded)</label><input id="receipt" type="file" accept="application/json,.json"><p id="verify" role="status">No file selected.</p><div id="records"></div></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const bytes=b64=>Uint8Array.from(atob(b64),c=>c.charCodeAt(0));
+const hash=async b=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',b)),x=>x.toString(16).padStart(2,'0')).join('');
+$('receipt').addEventListener('change',async()=>{
+ $('records').replaceChildren();
+ try{
+  const file=$('receipt').files[0];if(!file)return;
+  if(file.size>8_000_000)throw Error('File exceeds 8 MB');
+  const data=JSON.parse(await file.text());
+  if(data.kind!=='shotproof-paired-image-inference'||!Array.isArray(data.runs)||!data.runs.length||data.runs.length>30)throw Error('Expected a ShotProof inference export');
+  const built=[];
+  for(const run of data.runs){
+   if(!Array.isArray(run.sent_png_base64)||run.sent_png_base64.length!==2||run.sent_png_sha256.length!==2)throw Error('Two exact transmitted images required');
+   const pngs=run.sent_png_base64.map(bytes);
+   for(let i=0;i<2;i++)if(await hash(pngs[i])!==run.sent_png_sha256[i])throw Error('Transmitted PNG hash mismatch');
+   if(typeof run.raw_output==='string'&&await hash(new TextEncoder().encode(run.raw_output))!==run.output_sha256)throw Error('Model output hash mismatch');
+   if(run.response_body_base64&&await hash(bytes(run.response_body_base64))!==run.response_body_sha256)throw Error('Response body hash mismatch');
+   const section=document.createElement('section');section.className='step';const body=document.createElement('div');body.className='full';
+   const title=document.createElement('h2');title.textContent=run.role+' / recorded '+run.status;body.append(title);
+   const meta=document.createElement('p');meta.textContent='Request '+run.request_id+' at '+run.started_at+' · '+(run.response_model||run.requested_model)+' · '+run.latency_ms+' ms recorded generation time';body.append(meta);
+   const images=document.createElement('div');images.className='comparison';
+   run.sent_png_base64.forEach((b64,i)=>{const div=document.createElement('div'),label=document.createElement('h3'),img=document.createElement('img');label.textContent=i?'Exact candidate pixels sent':'Exact reference pixels sent';img.src='data:image/png;base64,'+b64;img.alt=label.textContent;div.append(label,img);images.append(div)});body.append(images);
+   const result=document.createElement('pre');result.style.whiteSpace='pre-wrap';result.style.overflowWrap='anywhere';result.textContent=run.raw_output||(run.response_body_base64?new TextDecoder().decode(bytes(run.response_body_base64)):run.error||'No generated output');body.append(result);
+   const runtime=document.createElement('p');runtime.textContent='Recorded runtime: '+JSON.stringify(run.runtime||{})+' · Model proposals require review. Self-reported uncertainty is uncalibrated.';body.append(runtime);
+   for(const d of (data.human_decisions||[]).filter(d=>d.request_id===run.request_id)){const p=document.createElement('p');p.textContent=(d.author_type==='agent_demo'?'Agent demonstration, no human approval':'Reviewer annotation')+' / '+d.decision+': '+d.note;body.append(p)}
+   section.append(body);built.push(section);
+  }
+  $('records').append(...built);$('verify').textContent='Verified exact PNG and output byte hashes for '+built.length+' recorded requests. This page made no inference request.';
+ }catch(e){$('records').replaceChildren();$('verify').textContent='Evidence blocked: '+e.message;}
+});
+</script></html>

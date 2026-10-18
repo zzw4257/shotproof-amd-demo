@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-labelledby="title desc">
+<title id="title">Occluded view illustration</title><desc id="desc">Right-hand region concealed. Original synthetic diagram. No model evaluation or prediction.</desc>
+<rect width="720" height="450" fill="#f8fafc"/>
+<text x="40" y="54" font-family="sans-serif" font-size="28" fill="#172b3a">Occluded view</text>
+<text x="40" y="84" font-family="sans-serif" font-size="18" fill="#536675">Right-hand region concealed</text>
+<rect x="150" y="145" width="420" height="200" rx="22" fill="#b6d4df" stroke="#284b63" stroke-width="6"/>
+<g id="module-1"><circle cx="240" cy="245" r="35" fill="#eff6ff" stroke="#284b63" stroke-width="6"/><circle cx="240" cy="245" r="13" fill="#284b63"/></g><g id="module-2"><circle cx="360" cy="245" r="35" fill="#eff6ff" stroke="#284b63" stroke-width="6"/><circle cx="360" cy="245" r="13" fill="#284b63"/></g><g id="module-3"><circle cx="480" cy="245" r="35" fill="#eff6ff" stroke="#284b63" stroke-width="6"/><circle cx="480" cy="245" r="13" fill="#284b63"/></g><rect id="occluder" x="414" y="135" width="215" height="225" rx="8" fill="#637381"/><path d="M430 156L612 338M430 218L550 338M492 156L612 276" stroke="#a6b2bb" stroke-width="5"/>
+<text x="40" y="405" font-family="sans-serif" font-size="18" fill="#8b3f15">ILLUSTRATION ONLY · NOT MODEL EVALUATED</text>
+</svg>
